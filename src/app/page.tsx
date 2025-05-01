@@ -7,6 +7,7 @@
 
 import BackgroundAnimation from "@/components/BackgroundAnimation";
 import Navbar from "@/sections/Header";
+import Hero from "@/sections/Hero";
 
 
 export default function Home() {
@@ -15,13 +16,13 @@ export default function Home() {
       <BackgroundAnimation />
       <div className="min-h-screen text-white">
         <Navbar />
-        {/* <main>
+        <main>
           <Hero />
-          <About />
+          {/* <About />
           <Skills />
           <Projects />
-          <Contact />
-        </main> */}
+          <Contact />*/}
+        </main> 
       </div>
     </>
   )

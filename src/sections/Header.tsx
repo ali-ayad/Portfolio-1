@@ -39,9 +39,20 @@ export default function Navbar() {
       }`}
     >
       <div className="container mx-auto px-6 md:px-8 flex items-center justify-between">
-        <Link href="/" className="text-xl font-bold text-white">
-          MyPortfolio
-        </Link>
+      <Link
+  href="/"
+  className="text-2xl md:text-3xl font-bold text-[#10b981] hover:text-[#ffffff] transition-all duration-300"
+>
+  <span className="text-[#10b981]">Ali</span> <span className="text-[#ffffff]">Ayad</span>
+</Link>
+
+
+
+
+
+
+
+
 
         <div className="hidden md:flex items-center justify-center space-x-8">
           {["hero", "about", "skills", "projects", "contact"].map((section) => (
@@ -58,7 +69,7 @@ export default function Navbar() {
         </div>
 
         <Link
-          href="https://github.com"
+          href="https://github.com/ali-ayad"
           target="_blank"
           rel="noopener noreferrer"
           className="p-2 rounded-full hover:bg-white/10 transition-colors"
