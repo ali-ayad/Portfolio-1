@@ -9,6 +9,7 @@ import BackgroundAnimation from "@/components/BackgroundAnimation";
 import About from "@/sections/About";
 import Navbar from "@/sections/Header";
 import Hero from "@/sections/Hero";
+import Projects from "@/sections/Projects";
 import Skills from "@/sections/Skills";
 
 
@@ -23,8 +24,8 @@ export default function Home() {
           
           <About />
           <Skills />
-          {/* <Projects />
-          <Contact />*/}
+           <Projects />
+          {/*<Contact />*/}
         </main> 
       </div>
     </>
