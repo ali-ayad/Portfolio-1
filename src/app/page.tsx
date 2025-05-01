@@ -6,8 +6,10 @@
 // import Contact from "@/components/contact"
 
 import BackgroundAnimation from "@/components/BackgroundAnimation";
+import About from "@/sections/About";
 import Navbar from "@/sections/Header";
 import Hero from "@/sections/Hero";
+import Skills from "@/sections/Skills";
 
 
 export default function Home() {
@@ -18,9 +20,10 @@ export default function Home() {
         <Navbar />
         <main>
           <Hero />
-          {/* <About />
+          
+          <About />
           <Skills />
-          <Projects />
+          {/* <Projects />
           <Contact />*/}
         </main> 
       </div>
