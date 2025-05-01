@@ -2,47 +2,39 @@
 
 import * as React from "react";
 import { Button } from "@/components/button";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
 const projects = [
   {
-    title: "E-Commerce Dashboard",
-    description:
-      "A comprehensive dashboard for e-commerce businesses with analytics, inventory management, and order processing.",
-    image: "/placeholder.svg?height=400&width=600",
-    tags: ["React", "Next.js", "Tailwind CSS", "Supabase"],
-    liveUrl: "#",
+    title: "Machines-Site",
+    description: "A responsive portfolio website for creative professionals with customizable themes and sections",
+    image: "/Screenshot 2025-05-01 220856.png", // Image generated from the URL
+    tags: ["React", "Next.js", "Tailwind CSS"],
+    liveUrl: "https://machines-site.vercel.app/",
     githubUrl: "#",
   },
+  
   {
-    title: "Task Management App",
+    title: "Lbitm-company",
     description:
-      "A collaborative task management application with real-time updates, drag-and-drop interface, and team collaboration features.",
-    image: "/placeholder.svg?height=400&width=600",
+      "A collaborative company application with real-time updates and with customizable themes businesses with analytics.",
+    image: "/Screenshot 2025-05-01 221449.png",
     tags: ["React", "TypeScript", "Framer Motion", "Firebase"],
-    liveUrl: "#",
+    liveUrl: "https://lbitmcompany.vercel.app/",
     githubUrl: "#",
   },
   {
-    title: "Portfolio Website",
+    title: "Meet-LandingPage",
     description:
       "A modern, responsive portfolio website for creative professionals with customizable themes and sections.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/Screenshot 2025-05-01 221807.png",
     tags: ["Next.js", "Tailwind CSS", "Shadcn UI", "Vercel"],
-    liveUrl: "#",
+    liveUrl: "https://exquisite-caramel-bb5bf6.netlify.app/",
     githubUrl: "#",
   },
-  {
-    title: "Chat Application",
-    description:
-      "A real-time messaging application with integrated notifications, direct messages, and group chat support.",
-    image: "/placeholder.svg?height=400&width=600",
-    tags: ["React", "Node.js", "Socket.IO", "MongoDB"],
-    liveUrl: "#",
-    githubUrl: "#",
-  },
+  
 ];
 
 export default function Projects() {
@@ -66,16 +58,16 @@ export default function Projects() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projectsToShow.map((project, index) => (
             <div
               key={index}
-              className="bg-[#0f1511] p-6 rounded-lg border border-[#10b981]/10 shadow-md transition-all duration-300 hover:border-[#10b981]/30 hover:shadow-lg"
+              className="bg-[#0f1511]  rounded-lg border border-[#10b981]/10 shadow-md transition-all duration-300 hover:border-[#10b981]/30 hover:shadow-lg"
             >
               {/* Project Image */}
-              <div className="relative h-48 overflow-hidden mb-4">
+              <div className="relative h-48 overflow-hidden mb-4 rounded-t-lg">
                 <Image
-                  src={project.image || "/placeholder.svg"}
+                  src={project.image }
                   alt={project.title}
                   fill
                   className="object-cover w-full h-full transition-transform duration-500"
@@ -84,7 +76,7 @@ export default function Projects() {
               </div>
 
               {/* Project Title and Description */}
-              <div>
+              <div className="p-6">
                 <h3 className="text-xl font-bold mb-2 text-white transition-colors hover:text-[#10b981]">
                   {project.title}
                 </h3>
@@ -121,7 +113,7 @@ export default function Projects() {
         </div>
 
         {/* View All Projects Button */}
-        {!showAllProjects && (
+        {/* {!showAllProjects && (
           <div className="flex justify-center mt-12">
             <button
               onClick={handleViewAllProjects}
@@ -130,7 +122,7 @@ export default function Projects() {
               View All Projects
             </button>
           </div>
-        )}
+        )} */}
       </div>
     </section>
   );

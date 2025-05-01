@@ -7,6 +7,7 @@
 
 import BackgroundAnimation from "@/components/BackgroundAnimation";
 import About from "@/sections/About";
+import Contact from "@/sections/Contact";
 import Navbar from "@/sections/Header";
 import Hero from "@/sections/Hero";
 import Projects from "@/sections/Projects";
@@ -25,7 +26,7 @@ export default function Home() {
           <About />
           <Skills />
            <Projects />
-          {/*<Contact />*/}
+          <Contact />
         </main> 
       </div>
     </>
