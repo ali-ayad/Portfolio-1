@@ -9,6 +9,7 @@ html, body {
     scroll-behavior: smooth; /* Enable smooth scrolling */
 }
 
+
 /* Allow vertical scrolling but hide the scrollbar */
 body {
     overflow-y: scroll; /* Keep vertical scrolling enabled */

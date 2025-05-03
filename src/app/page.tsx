@@ -17,7 +17,10 @@ import Skills from "@/sections/Skills";
 export default function Home() {
   return (
     <>
-      <BackgroundAnimation />
+     <div className="fixed inset-0 bg-[#0d0d0d] z-[-2]" />
+     <div className="fixed inset-0 z-[-1]">
+        <BackgroundAnimation />
+      </div>
       <div className="min-h-screen text-white">
         <Navbar />
         <main>
