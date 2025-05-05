@@ -1,8 +1,12 @@
 "use client";
+
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
+import { useToast } from "@/hooks/use-toast";
 
 export default function Contact() {
+  const { toast } = useToast();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -20,25 +24,44 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
+  
+    const { name, email, message } = formData;
+  
+    if (!name.trim() || !email.trim() || !message.trim()) {
+      toast({
+        title: "Missing Fields",
+        description: "Please fill in all fields before submitting.",
+        variant: "destructive",
+      });
+      return;
+    }
+  
     emailjs
       .send(
-        "service_8j4jqwj",     // Replace with your EmailJS service ID
-        "template_2fug66x",    // Replace with your EmailJS template ID
+        "service_8j4jqwj",
+        "template_2fug66x",
         formData,
-        "iDUeyOGEWamdwIUF7"      // Replace with your EmailJS public key
+        "iDUeyOGEWamdwIUF7"
       )
       .then(
         () => {
-          alert("Message sent successfully!");
+          toast({
+            title: "Success",
+            description: "Message sent successfully!",
+          });
           setFormData({ name: "", email: "", message: "" });
         },
         (error) => {
           console.error("FAILED...", error);
-          alert("Failed to send message. Please try again.");
+          toast({
+            title: "Error",
+            description: "Failed to send message. Please try again.",
+            variant: "destructive",
+          });
         }
       );
   };
+  
 
   return (
     <section id="contact" className="py-24">

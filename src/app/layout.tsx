@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Toaster } from "@/components/ui/toaster"; // <-- Import Toaster
 
 export const metadata: Metadata = {
   title: "My Portfolio",
@@ -13,7 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        {children}
+        <Toaster /> {/* <-- Add this */}
+      </body>
     </html>
   );
 }
